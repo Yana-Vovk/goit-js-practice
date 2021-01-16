@@ -120,31 +120,78 @@
 
 
 
-function rot13(message){
-  // const absLowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  // const absUpperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-  const abc = [['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'], ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']];
+// function rot13(message){
 
-  const arrOfLetters = message.split('');
-  // console.table(arrOfLetters);
+//   const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-  for (let letter of arrOfLetters) {
-    for (let i = 0; i < 26; i += 1){
-      for (let j = 0; j < 26; j += 1){
-        console.table(letter);
-        if (letter === abc[i][j]) {
-          console.log(letter,'-Это буква');
-        } else { console.log(letter, '-Не буква');}
-      }       
-           }
-    console.log(letter === letter.toUpperCase());
+//   const abcs = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-    
-}
+//   const ABCs = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-}
+//   const arrOfLetters = message.split('');
+
+//   let index = 0;
+
+//   let newArr = [];
+
+//   for (let letter of arrOfLetters) {
+//          if (abc.includes (letter)) {
+//             if (letter === letter.toUpperCase()) {
+//               index = ABCs.indexOf(letter);
+//               newArr.push(ABCs[index + 13]);
+//             } else {
+//               index = abcs.indexOf(letter);
+//               newArr.push(abcs[index + 13]);       
+//           }
+//           } else {
+//             newArr.push(letter);          
+//         } 
+//   }
+//   const newLine = newArr.join('');
+//   console.log(newLine);
+//   return newLine;
+// }
 
 // rot13("test");
-rot13("Artur");
+// rot13("Artur");
 // rot13("Yana_30_Vovk666");
+// rot13("vhjhjHJKlBB68hhHH/'hh");
 
+
+// function toCamelCase(str) {
+//   const arrOfWords = str.includes('-') ? str.split('-') : str.split('_');
+//   const newArray = [];
+//   newArray.push(arrOfWords[0]);
+
+//   for (let i = 1; i < arrOfWords.length; i += 1) {
+//    const arrOfLetters = arrOfWords[i].split('');
+//     arrOfLetters.splice(0, 1, arrOfLetters[0].toUpperCase());
+//     newArray.push(arrOfLetters.join(''));
+//   }
+//   console.log(newArray.join(''));
+  
+// }
+
+// toCamelCase('mann_gegen_mann');
+// toCamelCase('Ohne-dich');
+
+
+var moveZeros = function (arr) {
+  // TODO: Program me
+  let counter =0;
+  const newArr = [];
+  for (const value of arr) {
+    if (value === 0) {
+      counter +=1;
+      continue;
+    } else {
+      newArr.push(value);
+    }
+  }
+  for (let i=0; i<counter; i+=1){
+    newArr.push(0);
+  }
+ console.log (newArr);
+}
+
+moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]);
