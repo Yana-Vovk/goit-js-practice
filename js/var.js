@@ -176,22 +176,116 @@
 // toCamelCase('Ohne-dich');
 
 
-var moveZeros = function (arr) {
-  // TODO: Program me
-  let counter =0;
-  const newArr = [];
-  for (const value of arr) {
-    if (value === 0) {
-      counter +=1;
-      continue;
-    } else {
-      newArr.push(value);
-    }
-  }
-  for (let i=0; i<counter; i+=1){
-    newArr.push(0);
-  }
- console.log (newArr);
-}
+// var moveZeros = function (arr) {
+//   // TODO: Program me
+//   let counter =0;
+//   const newArr = [];
+//   for (const value of arr) {
+//     if (value === 0) {
+//       counter +=1;
+//       continue;
+//     } else {
+//       newArr.push(value);
+//     }
+//   }
+//   for (let i=0; i<counter; i+=1){
+//     newArr.push(0);
+//   }
+//  console.log (newArr);
+// }
 
-moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]);
+// moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]);
+
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Пиши код ниже этой строки
+//   for (const key in salaries) {
+//     // if (salaries.hasOwnProperty(key)){
+//     // totalSalary += salaries.key;
+//     console.log (salaries[key]);
+//   }
+//   // }
+  
+//   // Пиши код выше этой строки
+//   console.log (totalSalary);
+// }
+
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 });
+
+
+// const products = [
+//   { name: 'Радар', price: 1300, quantity: 4 },
+//   { name: 'Сканер', price: 2700, quantity: 3 },
+//   { name: 'Дроид', price: 400, quantity: 7 },
+//   { name: 'Захват', price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Пиши код ниже этой строки
+//   let result = 0;
+//   for (const item of products){
+//    if (item.name === productName){ 
+//      result = item.price;
+//      break;
+//    } else {
+//     result = null;
+//      break;
+//    }
+//   }
+//   // Пиши код выше этой строки
+//   console.log(result);
+// }
+
+// // getProductPrice('Рада');
+// getProductPrice('Захват');
+
+const atTheOldToad = {
+  potions: [
+    { name: 'Зелье скорости', price: 460 },
+    { name: 'Дыхание дракона', price: 780 },
+    { name: 'Каменная кожа', price: 520 },
+  ],
+  // Пиши код ниже этой строки
+  getPotions() {
+   console.table (this.potions);
+  },
+  addPotion(potionName) {
+    for (const potion of this.potions) {
+      if (potion === potionName) {
+        console.log(`Зелье ${potionName} уже есть в инвентаре!`);
+        return;
+      }
+    }
+    this.potions.push(potionName);
+    
+    console.table (this.potions);
+  },
+  removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i += 1){
+      if (potionName === this.potions[i].name) {
+        this.potions.splice(i, 1);
+        console.table(this.potions);
+        return;
+      }
+    }
+    console.log (`Зелья ${potionName} нет в инвентаре!`);
+    
+  },
+  updatePotionName(oldName, newName) {
+    for (let i = 0; i < this.potions.length; i += 1) { 
+      if (oldName === this.potions[i].name) {
+        this.potions[i].name = newName;
+        console.table(this.potions);
+        return;
+      }
+    }
+      return `Зелья ${oldName} нет в инвентаре!`;
+  },
+  // Пиши код выше этой строки
+};
+
+atTheOldToad.getPotions();
+// atTheOldToad.addPotion({ name: 'Невидимка', price: 620 });
+// atTheOldToad.removePotion('Зелье скорости');
+atTheOldToad.updatePotionName('Дыхание дракона', 'Полиморф');
