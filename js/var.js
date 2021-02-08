@@ -240,52 +240,179 @@
 // // getProductPrice('Рада');
 // getProductPrice('Захват');
 
-const atTheOldToad = {
-  potions: [
-    { name: 'Зелье скорости', price: 460 },
-    { name: 'Дыхание дракона', price: 780 },
-    { name: 'Каменная кожа', price: 520 },
-  ],
-  // Пиши код ниже этой строки
-  getPotions() {
-   console.table (this.potions);
-  },
-  addPotion(potionName) {
-    for (const potion of this.potions) {
-      if (potion === potionName) {
-        console.log(`Зелье ${potionName} уже есть в инвентаре!`);
-        return;
-      }
-    }
-    this.potions.push(potionName);
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Зелье скорости', price: 460 },
+//     { name: 'Дыхание дракона', price: 780 },
+//     { name: 'Каменная кожа', price: 520 },
+//   ],
+//   // Пиши код ниже этой строки
+//   getPotions() {
+//    console.table (this.potions);
+//   },
+//   addPotion(potionName) {
+//     // for (const potion of this.potions) {
+//     //   if (potion === potionName) {
+//     //     console.log(`Зелье ${potionName} уже есть в инвентаре!`);
+//     //     return;
+//     //   }
+//     if (this.potions.includes(potionName)) {
+//      console.log(`Зелье ${potionName} уже есть в инвентаре!`); 
+//     }
+//     this.potions.push(potionName);
+//     // }
+//     // this.potions.push(potionName);
     
-    console.table (this.potions);
-  },
-  removePotion(potionName) {
-    for (let i = 0; i < this.potions.length; i += 1){
-      if (potionName === this.potions[i].name) {
-        this.potions.splice(i, 1);
-        console.table(this.potions);
-        return;
-      }
-    }
-    console.log (`Зелья ${potionName} нет в инвентаре!`);
+//     console.table (this.potions);
+//   },
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i += 1){
+//       if (potionName === this.potions[i].name) {
+//         this.potions.splice(i, 1);
+//         console.table(this.potions);
+//         return;
+//       }
+//     }
+//     console.log (`Зелья ${potionName} нет в инвентаре!`);
     
-  },
-  updatePotionName(oldName, newName) {
-    for (let i = 0; i < this.potions.length; i += 1) { 
-      if (oldName === this.potions[i].name) {
-        this.potions[i].name = newName;
-        console.table(this.potions);
-        return;
-      }
-    }
-      return `Зелья ${oldName} нет в инвентаре!`;
-  },
-  // Пиши код выше этой строки
-};
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (let i = 0; i < this.potions.length; i += 1) { 
+//       if (oldName === this.potions[i].name) {
+//         this.potions[i].name = newName;
+//         console.table(this.potions);
+//         return;
+//       }
+//     }
+//       return `Зелья ${oldName} нет в инвентаре!`;
+//   },
+//   // Пиши код выше этой строки
+// };
 
-atTheOldToad.getPotions();
+// atTheOldToad.getPotions();
 // atTheOldToad.addPotion({ name: 'Невидимка', price: 620 });
-// atTheOldToad.removePotion('Зелье скорости');
-atTheOldToad.updatePotionName('Дыхание дракона', 'Полиморф');
+// // atTheOldToad.removePotion('Зелье скорости');
+// // atTheOldToad.updatePotionName('Дыхание дракона', 'Полиморф');
+
+
+// Setup
+// const collection = {
+//   2548: {
+//     albumTitle: 'Slippery When Wet',
+//     artist: 'Bon Jovi',
+//     tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//   },
+//   2468: {
+//     albumTitle: '1999',
+//     artist: 'Prince',
+//     tracks: ['1999', 'Little Red Corvette']
+//   },
+//   1245: {
+//     artist: 'Robert Palmer',
+//     tracks: []
+//   },
+//   5439: {
+//     albumTitle: 'ABBA Gold'
+//   }
+// };
+
+// // Only change code below this line
+// function updateRecords(object, id, prop, value) {
+//   for (const key in object) {
+   
+//     if (id.toString() === key) {
+
+//       switch (prop) {
+//         case 'albumTitle':
+//           if (value === "") {
+//             delete object[key].albumTitle;
+//             break;
+//           }
+//           object[key].albumTitle = value;
+//           break;
+        
+//         case 'artist':
+//            if (value === "") {
+//             delete object[key].artist;
+//             break;
+//           }
+//           object[key].artist = value;
+//           break;
+        
+//         case 'tracks':
+//            if (value === "") {
+//             delete object[key].tracks;
+//             break;
+//           }
+
+//           if (object[key].hasOwnProperty('tracks')) {
+//             object[key].tracks.push(value);
+//             break;
+//           }
+
+//           object[key].tracks = [value];
+//           break;                
+//       }
+
+      
+//     } 
+//   }
+//   console.log (object);
+//       return;
+// }
+
+// updateRecords(collection, 2468, "tracks", "Free");
+
+// function makePizza(pizzaName, callback) {
+//   console.log(`Пицца ${pizzaName} готовится, ожидайте...`);
+//   callback(pizzaName);
+// }
+
+// makePizza('Роял гранд', function deliverPizza(pizza) {
+//   console.log(`Доставляем пиццу ${pizza}.`);
+// });
+
+
+// const orders = [
+//   { email: 'solomon@topmail.ua', dish: 'Burger' },
+//   { email: 'artemis@coldmail.net', dish: 'Pizza' },
+//   { email: 'jacob@mail.com', dish: 'Taco' },
+// ];
+
+// // Пиши код ниже этой строки
+// function composeMessage(position) {
+// return (`Готовим ${this.dish} для ${this.email}. Ваш заказ ${position+1}-й в очереди.`);
+// }
+
+// const messages = orders.map((item, index) => composeMessage.call(item, index));
+
+
+
+// console.log(messages);
+
+
+
+function StringBuilder (baseValue) {
+this.value=baseValue;
+}
+StringBuilder.prototype.getValue = function(){
+return this.value;
+}
+StringBuilder.prototype.padEnd = function(str){
+this.value= `${this.value}${str}`;
+}
+StringBuilder.prototype.padStart = function(str){
+this.value= `${str}${this.value}`;
+}
+StringBuilder.prototype.padBoth = function(str){
+this.value= `${str}${this.value}${str}`;
+}
+// Пиши код выше этой строки
+const builder = new StringBuilder('.');
+console.log(builder.getValue()); // '.'
+builder.padStart('^');
+console.log(builder.getValue()); // '^.'
+builder.padEnd('^');
+console.log(builder.getValue()); // '^.^'
+builder.padBoth('=');
+console.log(builder.getValue()); // '=^.^='
