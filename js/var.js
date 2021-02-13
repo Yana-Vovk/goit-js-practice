@@ -9,25 +9,25 @@
 //         case 'april':
 //             console.log('You were born in spring');
 //             break;
-    
+
 //         case 'december':
 //         case 'january':
 //         case 'february':
 //             console.log('You were born in winter');
 //             break;
-    
+
 //         case 'june':
 //         case 'july':
 //         case 'august':
 //             console.log('You were born in summer');
 //             break;
-    
+
 //         case 'september':
 //         case 'october':
 //         case 'november':
 //             console.log('You were born in autumn');
 //             break;
-    
+
 //         default:
 //             console.log('You entered incorrect data');
 //     }
@@ -35,7 +35,7 @@
 
 
 // function findLongestWord(string) {
- 
+
 //     const array = string.split(' ');
 //     console.log (array);
 //   let biggest = 0;
@@ -69,7 +69,7 @@
 //   }
 //   // Пиши код выше этой строки
 //   return numbers;
-  
+
 // }
 
 // createArrayOfNumbers(29, 34);
@@ -84,9 +84,9 @@
 //   }
 
 //   const result = (summ / n)%1 > 0? -1 : summ / n;
- 
+
 //     console.log(result);
-  
+
 // }
 
 // function findEvenIndex(arr)
@@ -99,7 +99,7 @@
 //   }
 
 //   if (sumRight !== 0) {
-  
+
 //     for (let i = 1; i < arr.length; i += 1) {
 //       sumRight -= arr[i];
 //       sumLeft += arr[i-1];
@@ -169,7 +169,7 @@
 //     newArray.push(arrOfLetters.join(''));
 //   }
 //   console.log(newArray.join(''));
-  
+
 // }
 
 // toCamelCase('mann_gegen_mann');
@@ -206,7 +206,7 @@
 //     console.log (salaries[key]);
 //   }
 //   // }
-  
+
 //   // Пиши код выше этой строки
 //   console.log (totalSalary);
 // }
@@ -262,7 +262,7 @@
 //     this.potions.push(potionName);
 //     // }
 //     // this.potions.push(potionName);
-    
+
 //     console.table (this.potions);
 //   },
 //   removePotion(potionName) {
@@ -274,7 +274,7 @@
 //       }
 //     }
 //     console.log (`Зелья ${potionName} нет в инвентаре!`);
-    
+
 //   },
 //   updatePotionName(oldName, newName) {
 //     for (let i = 0; i < this.potions.length; i += 1) { 
@@ -319,7 +319,7 @@
 // // Only change code below this line
 // function updateRecords(object, id, prop, value) {
 //   for (const key in object) {
-   
+
 //     if (id.toString() === key) {
 
 //       switch (prop) {
@@ -330,7 +330,7 @@
 //           }
 //           object[key].albumTitle = value;
 //           break;
-        
+
 //         case 'artist':
 //            if (value === "") {
 //             delete object[key].artist;
@@ -338,7 +338,7 @@
 //           }
 //           object[key].artist = value;
 //           break;
-        
+
 //         case 'tracks':
 //            if (value === "") {
 //             delete object[key].tracks;
@@ -354,7 +354,7 @@
 //           break;                
 //       }
 
-      
+
 //     } 
 //   }
 //   console.log (object);
@@ -392,27 +392,197 @@
 
 
 
-function StringBuilder (baseValue) {
-this.value=baseValue;
-}
-StringBuilder.prototype.getValue = function(){
-return this.value;
-}
-StringBuilder.prototype.padEnd = function(str){
-this.value= `${this.value}${str}`;
-}
-StringBuilder.prototype.padStart = function(str){
-this.value= `${str}${this.value}`;
-}
-StringBuilder.prototype.padBoth = function(str){
-this.value= `${str}${this.value}${str}`;
-}
-// Пиши код выше этой строки
-const builder = new StringBuilder('.');
-console.log(builder.getValue()); // '.'
-builder.padStart('^');
-console.log(builder.getValue()); // '^.'
-builder.padEnd('^');
-console.log(builder.getValue()); // '^.^'
-builder.padBoth('=');
-console.log(builder.getValue()); // '=^.^='
+// function StringBuilder (baseValue) {
+// this.value=baseValue;
+// }
+// StringBuilder.prototype.getValue = function(){
+// return this.value;
+// }
+// StringBuilder.prototype.padEnd = function(str){
+// this.value= `${this.value}${str}`;
+// }
+// StringBuilder.prototype.padStart = function(str){
+// this.value= `${str}${this.value}`;
+// }
+// StringBuilder.prototype.padBoth = function(str){
+// this.value= `${str}${this.value}${str}`;
+// }
+// // Пиши код выше этой строки
+// const builder = new StringBuilder('.');
+// console.log(builder.getValue()); // '.'
+// builder.padStart('^');
+// console.log(builder.getValue()); // '^.'
+// builder.padEnd('^');
+// console.log(builder.getValue()); // '^.^'
+// builder.padBoth('=');
+// console.log(builder.getValue()); // '=^.^='
+
+// function filterArray(numbers, value) {
+//     const filteredNumbers = [];
+//     // Пиши код ниже этой строки
+
+//     numbers.forEach(item => {
+//         if (item > value) {
+//             filteredNumbers.push(item);
+//         }
+//     })
+
+//     // Пиши код выше этой строки
+//     console.log(filteredNumbers);
+// }
+
+// filterArray([2, 4, 7, 12, 2, 9, 11, 25, 1, 35], 10);
+
+const arr = [
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male'
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    gender: 'female'
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    gender: 'male'
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    gender: 'female'
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    gender: 'male'
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    gender: 'male'
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    gender: 'female'
+  }
+]
+
+// // Пиши код ниже этой строки
+// const getUsersWithEyeColor = (users, color) => {
+//   const arrOfNames = [];
+//   users.filter (function(item){
+//    if (item.eyeColor === color){
+//        arrOfNames.push(item.name);
+//     //    console.log(arrOfNames);
+//    }
+//   })
+// console.log(arrOfNames);
+// };
+// // Пиши код выше этой строки
+// getUsersWithEyeColor(arr, 'brown');
+
+// Пиши код ниже этой строки
+const users =[
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male'
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    gender: 'female'
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    gender: 'male'
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    gender: 'female'
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    gender: 'male'
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    gender: 'male'
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    gender: 'female'
+  }
+];
+
+const calculateTotalBalance = users => {
+  function reduce((sum, element) => {sum + element.balance}, 0);
+   
+};
+
+console.log(calculateTotalBalance());
